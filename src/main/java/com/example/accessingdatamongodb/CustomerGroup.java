@@ -1,0 +1,29 @@
+package com.example.accessingdatamongodb;
+
+import org.springframework.data.annotation.Id;
+
+
+public class CustomerGroup {
+
+    @Id
+    public String id;
+
+    public String name;
+    public String description;
+
+    public CustomerGroup() {}
+
+    public CustomerGroup(String name, String description) {
+        this.description = description;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "CustomerGroup[id=%s, name='%s', description='%s']",
+                id, name, description);
+    }
+
+}
+
