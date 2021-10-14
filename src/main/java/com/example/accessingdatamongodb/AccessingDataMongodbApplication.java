@@ -125,6 +125,8 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 	}
 
 
+
+
 	public List<Payer> payers =new ArrayList<>();
 
 	public List<Shipto> shiptos = new ArrayList<>();
@@ -140,7 +142,7 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 
 
 		System.out.println("Refresh All Record?");
-		String del = myObj.nextLine();  // Read user input
+		String del = "YES"; //myObj.nextLine();  // Read user input
 
 		if(del.equals("YES")) {
 			repository.deleteAll();
@@ -164,7 +166,7 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 
 
 		System.out.println("PopulatePermission Records?");
-		String perm = myObj.nextLine();  // Read user input
+		String perm = "YES"; // myObj.nextLine();  // Read user input
 
 		if(perm.equals("YES")) {
 			//create permissions
@@ -172,7 +174,7 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 		}
 
 		System.out.println("PopulateNonADMIN Role Records?");
-		String roleP = myObj.nextLine();  // Read user input
+		String roleP = "YES"; // myObj.nextLine();  // Read user input
 
 		if(roleP.equals("YES")) {
 			//create permissions
@@ -181,7 +183,7 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 
 
 		System.out.println("PopulateADMIN Role Records?");
-		String adminroleP = myObj.nextLine();  // Read user input
+		String adminroleP = "YES"; // myObj.nextLine();  // Read user input
 
 		if(adminroleP.equals("YES")) {
 			//create permissions
@@ -191,7 +193,7 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 
 
 		System.out.println("Populate Persona Records?");
-		String personaP = myObj.nextLine();  // Read user input
+		String personaP = "YES"; // myObj.nextLine();  // Read user input
 
 		if(personaP.equals("YES")) {
 			//create permissions
@@ -201,7 +203,7 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 
 
 		System.out.println("Populate UserToken Records?");
-		String userTokenP = myObj.nextLine();  // Read user input
+		String userTokenP = "YES"; // myObj.nextLine();  // Read user input
 
 		if(userTokenP.equals("YES")) {
 
@@ -209,7 +211,7 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 
 			populateShiptos();
 			populateSoldtos();
-			populateUserToken();
+		//	populateUserToken();
 
 
 
